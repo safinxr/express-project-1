@@ -7,6 +7,10 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 const port = 3000;
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send("Hey yo");
+});
+app.post("/", (req, res) => {
+    console.log(req.body);
+    res.send("post working");
 });
 exports.default = app;
